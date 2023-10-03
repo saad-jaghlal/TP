@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/cost_of_service"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="Cout de service"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:id="@+id/question_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment etait le service ?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cost_of_service"
+
+        />
+    <RadioGroup
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_service"
+        >
+        <RadioButton
+            android:id="@+id/option_vingt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="incroyable (20 %)"/>
+        <RadioButton
+            android:id="@+id/option_dix_height_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bon (18 %)"/>
+        <RadioButton
+            android:id="@+id/option_quinze_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok (15 %)"/>
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/round_Up_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="arrondir le pourboir ?"
+        app:layout_constraintTop_toBottomOf="@+id/options"
+        app:layout_constraintStart_toStartOf="@+id/options"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="28dp"
+        />
+
+    <Button
+        android:id="@+id/calculat_Button"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Montant pourboire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round_Up_switch" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
